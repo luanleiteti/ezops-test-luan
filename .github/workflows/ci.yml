@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 env:
   IMAGE_NAME: luanleiteti/chatapp:latest
   PROD_SRV_IP_ADDRESS: 3.93.231.245

@@ -11,7 +11,7 @@ env:
   SSH_PORT: 22
 
 jobs:
-  test:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - name: Printando as coisas
@@ -19,7 +19,7 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
-    needs: test
+    needs: Test
 
     steps:
       - name: Set up QEMU
@@ -40,8 +40,8 @@ jobs:
           push: true
           tags: luanleiteti/chatapp:latest
 
-  deploy-ec2:
-    name: Deploy EC2
+  Deploy-ec2:
+    name: Deploy
     runs-on: ubuntu-latest
     needs: docker-build
     steps:

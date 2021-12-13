@@ -6,7 +6,7 @@ on:
       - 'main'
 env:
   IMAGE_NAME: luanleiteti/chatapp:latest
-  PROD_SRV_IP_ADDRESS: 3.93.231.245
+  PROD_SRV_IP_ADDRESS: 3.94.173.211
   PROD_SRV_USER: ubuntu
   SSH_PORT: 22
 
@@ -49,7 +49,7 @@ jobs:
     - name: Deploy da imagem buildada
       uses: appleboy/ssh-action@master
       with:
-        host: 3.93.231.245
+        host: 3.94.173.211
         username: ubuntu
         key: ${{ secrets.SSH_KEY }}
         port: 22
